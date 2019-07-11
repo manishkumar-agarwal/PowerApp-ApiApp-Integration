@@ -9,6 +9,8 @@ a) Deploy Azure Components (API App, Mock API App, Key Vault and Key Vault Secre
 </a>
 
 
+
+
 b) Verify the Azure Template Deployment is complete successfully
 
 
