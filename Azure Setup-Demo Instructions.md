@@ -14,7 +14,7 @@ a) Deploy Azure Components (API App, Mock API App, Key Vault and Key Vault Secre
 
 b) Verify the Azure Template Deployment is complete successfully
 
-c) Verify the Keyvault set-up
+c) Verify the Azure Key vault set-up
 
      i) Goto Azure Resource Group --> KeyVault --> Settings --> Secrets (Verify the secret is created)
      
