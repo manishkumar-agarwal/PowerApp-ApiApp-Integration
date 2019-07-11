@@ -13,4 +13,7 @@ c) Click on '+ New Application Setting'
 
 d) In the New Application Setting Balde, enter the values for configuring the API Match Key with below values
 
-![Application Setting](AddApplicationSetting.PNG)
+Name :  MatchKey
+Value : << Value of the Key to be sent from consuming API>>
+
+![Application Setting](MatchKeyApplicationSetting.PNG)
