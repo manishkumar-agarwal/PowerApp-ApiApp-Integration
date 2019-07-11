@@ -40,3 +40,14 @@ f) Verify the Managed Identity is enabled for AAD token access.
   Goto API App --> Settings --> Identity  
 
 ![Managed Identity Verification](ManagedIdentityVerification.png)
+
+
+g) Enable AAD Authentication for the Api App
+
+  Goto API App --> Settings --> Authentication / Authorization
+
+![Enable AAD Authentication](AADAuthenticationEnablement.png)
+
+
+  
+
