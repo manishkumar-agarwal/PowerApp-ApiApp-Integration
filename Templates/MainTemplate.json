@@ -49,7 +49,7 @@
 	  
 	  "TemplateArtifcatsUrl":{
 	  "type": "string",
-	  "defaultValue": "https://samplearmsa.blob.core.windows.net/armtemplates/",
+	  "defaultValue": "https://raw.githubusercontent.com/manishkumar-agarwal/PowerApp-ApiApp-Integration/master/Templates/",
 	  "metadata":{
 	  "description":"Value for the url where the templates are stored"
 	  }
