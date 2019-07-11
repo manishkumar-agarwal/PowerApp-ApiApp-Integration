@@ -1,0 +1,123 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+	
+	  "apiNamePrefix" :{
+	  "type":"string",
+	  "metadata": {
+      "description": "Prefix for Api Name. This should be a unique name and will be used to create API Apps"
+      }
+	  },
+	  
+	  "keyvaultname":{
+	  "type": "string",
+	  "metadata":{
+	  "description":"Value for the keyvault name!"
+	  }
+	  },
+	  
+	  "SecretName":{
+	  "type":"string",
+	  "metadata": {
+      "description": "Name of the secret in the keyvault"
+      }	  
+	  },
+	  
+	  "SecretValue":{
+	  "type":"secureString",
+	  "metadata": {
+      "description": "Value for the secret!"
+      }	  
+	  },
+	  	  
+	  "ApiApplicationCodeRepositoryUrl":{
+	  "type": "string",
+	  "defaultValue": "https://github.com/rishabbehl1997/samplerepo123-.git",
+	  "metadata":{
+	  "description":"Value for the github url for the main api app!"
+	  }
+	  },
+	  
+	  "MockApiApplicationCodeRepositoryUrl":{
+	  "type": "string",
+	  "defaultValue": "https://github.com/rishabbehl1997/MockApiRepo.git",
+	  "metadata":{
+	  "description":"Value for the github url for the mock api app!"
+	  }
+	  },
+	  
+	  "TemplateArtifcatsUrl":{
+	  "type": "string",
+	  "defaultValue": "https://samplearmsa.blob.core.windows.net/armtemplates/",
+	  "metadata":{
+	  "description":"Value for the url where the templates are stored"
+	  }
+	  },
+	  
+	  "location": {
+      "type": "string",
+      "defaultValue": "[resourceGroup().location]",
+      "metadata": {
+      "description": "Location for all resources."
+      }
+	  }
+	  
+	},
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Resources/deployments",
+            "apiVersion": "2018-05-01",
+            "name": "ApiAppTemplate",
+            "properties": {
+                "mode": "Incremental",
+                "templateLink": {
+                    "uri": "[concat(parameters('TemplateArtifcatsUrl'),'API-Creation-and-CodeDeploy.json')]",
+                    "contentVersion": "1.0.0.0"
+                },
+				"parameters":{
+				"siteName":{"value":"[parameters('apiNamePrefix')]"},
+				"repoURL":{"value":"[parameters('ApiApplicationCodeRepositoryUrl')]"},
+				"hostingPlanName":{"value":"[concat(parameters('apiNamePrefix'),'-hostplan')]"}
+				}
+            }
+        },
+		{
+            "type": "Microsoft.Resources/deployments",
+            "apiVersion": "2018-05-01",
+            "name": "KeyVaultTemplate",
+            "properties": {
+                "mode": "Incremental",
+                "templateLink": {
+                    "uri": "[concat(parameters('TemplateArtifcatsUrl'),'KeyVault.json')]",
+                    "contentVersion": "1.0.0.0"
+                },
+                "parameters":{
+                    "objectId":{"value": "[reference('ApiAppTemplate').outputs.principalId.value]"},
+					"secretName":{"value":"[parameters('SecretName')]"},
+					"secretValue":{"value":"[parameters('SecretValue')]"},
+					"keyVaultName":{"value":"[parameters('keyVaultName')]"}
+                }
+            }
+		
+		},
+		{
+		    "type": "Microsoft.Resources/deployments",
+            "apiVersion": "2018-05-01",
+            "name": "MockApiAppTemplate",
+            "properties": {
+                "mode": "Incremental",
+                "templateLink": {
+                    "uri": "[concat(parameters('TemplateArtifcatsUrl'),'API-Creation-and-CodeDeploy.json')]",
+                    "contentVersion": "1.0.0.0"
+                },
+				"parameters":{
+				"siteName":{"value":"[concat(parameters('apiNamePrefix'),'mockapi')]"},
+				"repoURL":{"value":"[parameters('MockApiApplicationCodeRepositoryUrl')]"},
+				"hostingPlanName":{"value":"[concat(parameters('apiNamePrefix'),'mockapi-hostplan')]"}
+				}
+            }
+		}
+    ]
+}
