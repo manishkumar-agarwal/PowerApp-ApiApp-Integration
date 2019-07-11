@@ -24,6 +24,7 @@ c) Verify the Azure Key vault set-up
 d) Configure the 'Mock Api App' as per the instructions in [Mock Enterprise API Instructions.md](https://github.com/manishkumar-agarwal/PowerApp-ApiApp-Integration/blob/master/MockApiApplication/Mock%20Enterprise%20API%20Instructions.md)
 
 
+e) Configure the 'Api App' as per the instructions in [API Instructions.md](https://github.com/manishkumar-agarwal/PowerApp-ApiApp-Integration/blob/master/ApiApplication/API%20Instructions.md)
 
 
-![Architecture Diagram](Architecture.png)
+
