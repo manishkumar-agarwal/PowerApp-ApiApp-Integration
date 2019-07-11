@@ -34,3 +34,8 @@ Name :  url
 
 Value : <<This is the Url of the Mock Enterprise API and is in the format https://mockApi.azurewebsites.net>>
                   
+
+f) Verify the Managed Identity is enabled for AAD token access.
+  Goto API App --> Settings --> Identity  
+
+![Managed Identity Verification](ManagedIdentityVerification.PNG)
