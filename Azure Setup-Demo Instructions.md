@@ -18,7 +18,7 @@ c) Verify the Azure Key vault set-up
 
      i) Goto Azure Resource Group --> KeyVault --> Settings --> Secrets (Verify the secret is created)
      
-    ii) KeyVault --> Settings --> Access Policies (Verify the API Application is granted access)
+    ii) KeyVault --> Settings --> Access Policies (Verify the API Application Managed Identity is granted access)
 
 
 ![Architecture Diagram](Architecture.png)
