@@ -13,10 +13,24 @@ c) Click on '+ New Application Setting'
 
 ![New Application Setting](Application%20setting.PNG)
 
-d) In the New Application Setting Balde, enter the values for configuring the API Match Key with below values
+d) In the New Application Setting Balde, enter the values for configuring the Application Setting with below values
 
 Name :  keyVault
 
 Value : << Name of the Azure KeyVault>>
 
 ![Application Setting](AddApplicationSetting.PNG)
+
+
+e) Repeat step (d) two times for configuring below Application settings
+
+Name :  secretName
+
+Value : << Name of the secret in the  Azure KeyVault>>
+
+                  &&
+
+Name :  url
+
+Value : <<This is the Url of the Mock Enterprise API and is in the format https://mockApi.azurewebsites.net>>
+                  
