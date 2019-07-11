@@ -1,8 +1,16 @@
-# Accessing an Enterprise API endpoint with PowerApps and API App Integration
+# Mock Enterprise API Instructions
+The Mock Enterprise API has a configurable Key which will be validated by the API to authenticate legitimate requests and send a response.
 
-The purpose of this demo is to showcase the ability of how PowerApps platform can help unlock the potential of untapped assets within an Enterprise ( legacy APIs, data sources, processes) with a low-code / no code approach
+As part of this exercise, we expect the users would publish this application to an Azure API App.
 
-To demonstrate this ability as a Hands-on experience, we will set-up an environment with the below sample architecture
+Below application settings will be needed for setting up the key.
 
+a) Goto the Azure API App on the portal
+b) API App --> Settings --> Configuration --> Application Settings
+c) Click on '+ New Application Setting'
 
-![Architecture Diagram](Architecture.png)
+![New Application Setting](Application setting.PNG)
+
+d) In the New Application Setting Balde, enter the values for configuring the API Match Key with below values
+
+![Application Setting](AddApplicationSetting.PNG)
