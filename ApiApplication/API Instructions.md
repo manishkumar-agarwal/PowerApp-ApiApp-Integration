@@ -36,6 +36,7 @@ Value : <<This is the Url of the Mock Enterprise API and is in the format https:
                   
 
 f) Verify the Managed Identity is enabled for AAD token access.
+
   Goto API App --> Settings --> Identity  
 
-![Managed Identity Verification](ManagedIdentityVerification.PNG)
+![Managed Identity Verification](ManagedIdentityVerification.png)
