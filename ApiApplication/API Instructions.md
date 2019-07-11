@@ -48,6 +48,11 @@ g) Enable AAD Authentication for the Api App
 
 ![Enable AAD Authentication](AADAuthenticationEnablement.png)
 
+  Select the express configuration for quick registration of the AAD application
+  
+![Express AAD Configuration](AADExpressConfiguration.png)  
+
+
 
   
 
