@@ -21,4 +21,6 @@ c) Verify the Azure Key vault set-up
     ii) KeyVault --> Settings --> Access Policies (Verify the API Application Managed Identity is granted access)
 
 
+d) Configure the 'Mock Api App' as per the instructions in [Mock Enterprise API Instructions.md](https://github.com/manishkumar-agarwal/PowerApp-ApiApp-Integration/blob/master/MockApiApplication/Mock%20Enterprise%20API%20Instructions.md)
+
 ![Architecture Diagram](Architecture.png)
