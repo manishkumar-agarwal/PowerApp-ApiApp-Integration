@@ -6,3 +6,12 @@ To demonstrate this ability as a Hands-on experience, we will set-up an environm
 
 
 ![Architecture Diagram](Architecture.png)
+
+This set-up requires the below components as the building blocks. (Refer to the 'Setup-Demo Instructions.md' for trying this out)
+
+a) API App instances for the PowerApp integration 
+b) API App instance for mocking the Enterprise API
+c) Azure Key Vault - This holds the API Key updated by
+d) Power App Custom Connector 
+e) Canvas Power App
+
