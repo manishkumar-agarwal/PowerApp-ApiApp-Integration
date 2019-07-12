@@ -15,4 +15,4 @@ a) Register an AAD Application for the PowerApps with below requirements
   
   For doing this set-up run the powershell script present at [Power Apps AAD Registration](https://github.com/manishkumar-agarwal/PowerApp-ApiApp-Integration/blob/master/Scripts/PowerAppAADRegistration.ps1)
 
-b) 
+b) Complete the instructins outlined in [Powerpps Dcoumentation.docx](https://github.com/manishkumar-agarwal/PowerApp-ApiApp-Integration/blob/master/Powerpps%20Dcoumentation.docx)
