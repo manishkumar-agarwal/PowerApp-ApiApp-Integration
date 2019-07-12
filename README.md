@@ -23,3 +23,5 @@ e) Canvas Power App
 # (Refer to the below instructions for trying this out) 
 - [Azure Setup-Demo Instructions.md](https://github.com/manishkumar-agarwal/PowerApp-ApiApp-Integration/blob/master/Azure%20Setup-Demo%20Instructions.md)
 
+- [PowerApp Setup-Demo Instructions.md](https://github.com/manishkumar-agarwal/PowerApp-ApiApp-Integration/blob/master/PowerApp%20Setup-Demo%20Instructions.md)
+
