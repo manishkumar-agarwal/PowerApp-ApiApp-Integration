@@ -1,8 +1,12 @@
-# Accessing an Enterprise API endpoint with PowerApps and API App Integration
+# PowerApps Set-up Instructions for HOL Demo
 
-The purpose of this demo is to showcase the ability of how PowerApps platform can help unlock the potential of untapped assets within an Enterprise ( legacy APIs, data sources, processes) with a low-code / no code approach
+Follow the below instructions to set-up the PowerApps architecture
 
-To demonstrate this ability as a Hands-on experience, we will set-up an environment with the below sample architecture
+a) Register an AAD Application for the PowerApps with below requirements
 
+    i) Must have a client secret
+   ii) Enable Access Permissions to the API APP which will be used for serving requests made by PowerApp
+  iii) Enable OAuth2.0 Authentication for this registered Application
+  
+  For doing this set-up run the powershell script present at [Power Apps AAD Registration](https://github.com/manishkumar-agarwal/PowerApp-ApiApp-Integration/blob/master/Scripts/PowerAppAADRegistration.ps1)
 
-![Architecture Diagram](Architecture.png)
